@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "267600706393",
+    "firebase_url": "https://uncommon-to-do-list-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "uncommon-to-do-list",
+    "storage_bucket": "uncommon-to-do-list.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267600706393:android:2f6935b488e3447c742a48",
+        "android_client_info": {
+          "package_name": "org.secuso.privacyfriendlytodolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqrex0kHRwRK-m1zFWKYKch0MGCMCrex8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
