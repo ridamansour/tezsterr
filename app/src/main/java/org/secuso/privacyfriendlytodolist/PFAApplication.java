@@ -2,6 +2,8 @@ package org.secuso.privacyfriendlytodolist;
 
 import android.app.Application;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 import androidx.work.Configuration;
 import org.secuso.privacyfriendlybackup.api.pfa.BackupManager;
 import org.secuso.privacyfriendlytodolist.backup.BackupCreator;
@@ -16,6 +18,7 @@ public class PFAApplication extends Application implements Configuration.Provide
         BackupManager.setBackupRestorer(new BackupRestorer());
     }
 
+    @NonNull
     @Override
     public Configuration getWorkManagerConfiguration() {
         return new Configuration.Builder()

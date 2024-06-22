@@ -71,10 +71,6 @@
         <activity
             android:name=".view.Settings"
             android:label="@string/settings" />
-        <service
-            android:name=".view.widget.ListViewWidgetService"
-            android:permission="android.permission.BIND_REMOTEVIEWS"
-             />
 
         <service android:name=".model.ReminderService" />
 
@@ -84,23 +80,6 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".view.widget.TodoListWidget"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/todo_list_widget_info" />
-        </receiver>
-
-        <activity android:name=".view.widget.TodoListWidgetConfigureActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
-            </intent-filter>
-        </activity>
 
 
         <receiver android:name="org.secuso.privacyfriendlytodolist.receiver.TodoReReceiver"

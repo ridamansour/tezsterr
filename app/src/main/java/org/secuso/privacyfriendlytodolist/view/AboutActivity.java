@@ -30,6 +30,8 @@ import android.widget.TextView;
 import org.secuso.privacyfriendlytodolist.BuildConfig;
 import org.secuso.privacyfriendlytodolist.R;
 
+import java.util.Objects;
+
 public class AboutActivity extends AppCompatActivity {
 
     @Override
@@ -46,7 +48,7 @@ public class AboutActivity extends AppCompatActivity {
             toolbar.setTitle(R.string.menu_about);
             toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white));
             setSupportActionBar(toolbar);
-            getSupportActionBar().setHomeAsUpIndicator(R.drawable.arrow);
+            Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.arrow);
         }
 
         if (getSupportActionBar() != null) {
@@ -58,11 +60,10 @@ public class AboutActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
-            case android.R.id.home:
-                finish();
-                return true;
+        // Respond to the action bar's Up/Home button
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
