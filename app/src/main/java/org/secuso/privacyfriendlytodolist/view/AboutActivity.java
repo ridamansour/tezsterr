@@ -30,12 +30,6 @@ import android.widget.TextView;
 import org.secuso.privacyfriendlytodolist.BuildConfig;
 import org.secuso.privacyfriendlytodolist.R;
 
-/**
- * Created by Sebastian Lutz on 31.01.2018
- *
- * Activity that shows information of the app development.
- */
-
 public class AboutActivity extends AppCompatActivity {
 
     @Override
